@@ -8,6 +8,11 @@ from school.crud import (
     search_students_by_name,
     update_student,
     filter_students_by_gender,
+    filter_students_by_gpa,
+    get_sorted_students_by_gpa,
+    add_score,
+    get_scores,
+    get_student_with_scores,
 )
 
 init_db()
@@ -30,6 +35,23 @@ init_db()
 # update_student(1, last_name='nimadir')
 
 
-females = filter_students_by_gender('Female')
-for female in females:
-    print(female.gender, female.full_name)
+# females = filter_students_by_gender('Female')
+# for female in females:
+#     print(female.gender, female.full_name)
+
+# sts = filter_students_by_gpa(3, 3.1)
+# for s in sts:
+#     print(s.gpa, s.first_name)
+
+
+# sts = get_sorted_students_by_gpa('desc')
+# for s in sts:
+#     print(s.gpa, s.first_name)
+
+
+# add_score(88, 'english', 4)
+# print(get_scores(87))
+
+print(get_student_with_scores()[86:88])
+
+
